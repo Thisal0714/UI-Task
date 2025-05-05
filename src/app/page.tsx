@@ -4,6 +4,7 @@ import logo from "./logo.png";
 import image from "./Image.png";
 import { useAuthStore } from "../app/AuthStore"; 
 import { useRouter } from 'next/navigation';
+import Dashboard from "../app/Dashboard/Dashboard";
 
 export default function Home() {
   const router = useRouter();
@@ -27,6 +28,7 @@ export default function Home() {
       setError("");  
       alert("Login successful 🎉");
       reset();
+      
     
       router.push('/app/Dashboard/Dashboard');
     }
@@ -122,7 +124,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right Section */}
+        
         <div className="w-full md:w-1/2 mt-5 md:mt-0 relative">
           <Image
             src={image}

@@ -2,11 +2,11 @@
 import { useAuthStore } from "../AuthStore"; 
 
 export default function Home() {
-  const { setIsLoggedIn } = useAuthStore(); // Assuming you have a method to manage login state
+  const { setIsLoggedIn } = useAuthStore(); 
 
   const handleLogout = () => {
     setIsLoggedIn(false);
-    // Optionally, redirect the user to the login page or home page
+    
   };
 
   return (
