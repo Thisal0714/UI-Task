@@ -1,10 +1,10 @@
-import { useAuthStore } from "../AuthStore"; // Adjust import based on your auth store
+"use client";
+import { useAuthStore } from "../AuthStore"; 
 
 export default function Home() {
   const { setIsLoggedIn } = useAuthStore(); // Assuming you have a method to manage login state
 
   const handleLogout = () => {
-    // Set the login state to false, assuming you have a method for that
     setIsLoggedIn(false);
     // Optionally, redirect the user to the login page or home page
   };

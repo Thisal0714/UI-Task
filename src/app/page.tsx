@@ -4,7 +4,6 @@ import logo from "./logo.png";
 import image from "./Image.png";
 import { useAuthStore } from "../app/AuthStore"; 
 import { useRouter } from 'next/navigation';
-import Dashboard from "../app/Dashboard/Dashboard";
 
 export default function Home() {
   const router = useRouter();
@@ -25,11 +24,10 @@ export default function Home() {
     if (email !== "test@visionexdigital.com.au" || password !== "password123") {
       setError("Invalid email or password");
     } else {
-      setError("");  // Clear error if credentials are valid
+      setError("");  
       alert("Login successful 🎉");
       reset();
-      
-      // After successful login, navigate to the Dashboard
+    
       router.push('/app/Dashboard/Dashboard');
     }
   };
